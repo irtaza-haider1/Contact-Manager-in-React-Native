@@ -8,11 +8,13 @@ interface Contact {
 interface ContactsState {
   contacts: Contact[];
   editForm: number | null;
+  showInfoScreen: boolean; // New state to show the information page
 }
 
 const initialState: ContactsState = {
   contacts: [],
   editForm: null,
+  showInfoScreen: false, // Initialize it to false
 };
 
 const contactsSlice = createSlice({
@@ -33,9 +35,12 @@ const contactsSlice = createSlice({
     setEditForm: (state, action: PayloadAction<number | null>) => {
       state.editForm = action.payload;
     },
+    toggleInfoScreen: (state) => {
+      state.showInfoScreen = !state.showInfoScreen; // Toggle the info screen
+    },
   },
 });
 
-export const { addContact, editContact, deleteContact, setEditForm } = contactsSlice.actions;
+export const { addContact, editContact, deleteContact, setEditForm, toggleInfoScreen } = contactsSlice.actions;
 
 export default contactsSlice.reducer;
