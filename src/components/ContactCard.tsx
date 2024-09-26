@@ -10,10 +10,10 @@ interface ContactCardProps {
 const ContactCard: React.FC<ContactCardProps> = ({ contact, onDelete, onEdit }) => {
   return (
     <View style={styles.contactItem}>
-      {/* <Image source={require('./assets/user.png')} style={styles.avatar} /> */}
       <View style={styles.contactInfo}>
-        <Text style={styles.name}>{contact.name}</Text>
-        <Text style={styles.email}>{contact.email}</Text>
+        {/* Explicitly setting text color to ensure it's visible */}
+        <Text style={[styles.name, { color: '#000' }]}>{contact.name}</Text>
+        <Text style={[styles.email, { color: '#000' }]}>{contact.email}</Text>
       </View>
       <TouchableOpacity onPress={onDelete} style={styles.deleteButton}>
         <Text>🗑️</Text>
@@ -39,12 +39,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 2,
   },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    marginRight: 10,
-  },
   contactInfo: {
     flexGrow: 1,
     marginLeft: 10,
@@ -52,10 +46,12 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: 'bold',
+    // Explicitly setting color to black to prevent invisible text
+    color: '#000',
   },
   email: {
     fontSize: 14,
-    color: '#666',
+    color: '#666', // You can keep this color if it's visible
   },
   deleteButton: {
     backgroundColor: 'transparent',
@@ -70,4 +66,3 @@ const styles = StyleSheet.create({
 });
 
 export default ContactCard;
-   

@@ -1,4 +1,4 @@
-#Thu Sep 26 14:40:35 PKT 2024
+#Thu Sep 26 15:15:10 PKT 2024
 base.0=/Users/irtazahaider/Desktop/AwesomeProject/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 base.1=/Users/irtazahaider/Desktop/AwesomeProject/android/app/build/intermediates/global_synthetics_dex/release/mergeReleaseGlobalSynthetics/classes.dex
 path.0=classes.dex

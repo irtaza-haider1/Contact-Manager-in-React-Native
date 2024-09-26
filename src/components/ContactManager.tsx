@@ -115,12 +115,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   name: {
+    paddingLeft: 110,
+    paddingTop: 20,
     fontSize: 18,
+    color: '#000000',
     fontWeight: 'bold',
   },
   email: {
+    paddingLeft: 110,
+    paddingTop: 20,
     fontSize: 16,
-    color: '#666',
+    color: '#000000',
   },
 });
 
