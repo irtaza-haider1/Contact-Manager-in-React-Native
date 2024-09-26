@@ -47,17 +47,19 @@ const AddContact: React.FC<AddContactProps> = ({ onAddContact }) => {
           </Text>
 
           <TextInput
-            style={styles.input}
+            style={[styles.input, { color: '#000' }]}  // Set text color explicitly to black
             value={name}
             onChangeText={setName}
             placeholder="Enter Name"
+            placeholderTextColor="#999"  // Set placeholder color to differentiate from input text
           />
           <TextInput
-            style={styles.input}
+            style={[styles.input, { color: '#000' }]}  // Set text color explicitly to black
             value={email}
             onChangeText={setEmail}
             placeholder="Enter Email"
             keyboardType="email-address"
+            placeholderTextColor="#999"  // Set placeholder color to differentiate from input text
           />
 
           <Button title={editForm !== null ? 'Update' : 'Submit'} onPress={handleSubmit} />
